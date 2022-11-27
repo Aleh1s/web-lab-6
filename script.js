@@ -56,10 +56,13 @@ function appendElements(e) {
     const content = dropdownInputContent.value;
     console.log(number + " " + content);
     for (let i = 0; i < number; i++) {
-        const newElem = document.createElement("div");
+        const newElem = document.createElement("li");
+        const newElemInner = document.createElement("a")
 
-        newElem.innerText = content;
-        newElem.classList.add("dropdown__element");
+        newElemInner.innerText = content;
+        newElemInner.href = "#";
+        newElemInner.classList.add("dropdown__element");
+        newElem.appendChild(newElemInner);
 
         dropdownMenu.appendChild(newElem);
     }

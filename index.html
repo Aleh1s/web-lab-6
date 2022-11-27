@@ -3,8 +3,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Grid</title>
 </head>
 <body>
@@ -26,59 +24,20 @@
     </div>
 </header>
 <div class="wrapper">
-    <aside class="left-aside">
-        <ul>
-            <li><b>Section 1</b>
-                <ul class="section">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
-                    <li><a href="#">Link 6</a></li>
-                    <li><a href="#">Link 7</a></li>
-                    <li><a href="#">Link 8</a></li>
-                </ul>
-            </li>
-            <li><b>Section 2</b>
-                <ul class="section">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
-                    <li><a href="#">Link 6</a></li>
-                    <li><a href="#">Link 7</a></li>
-                    <li><a href="#">Link 8</a></li>
-                </ul>
-            </li>
-            <li><b>Section 3</b>
-                <ul class="section">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
-                    <li><a href="#">Link 6</a></li>
-                    <li><a href="#">Link 7</a></li>
-                    <li><a href="#">Link 8</a></li>
-                </ul>
-            </li>
-            <li><b>Section 4</b>
-                <ul class="section">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
-                    <li><a href="#">Link 6</a></li>
-                    <li><a href="#">Link 7</a></li>
-                    <li><a href="#">Link 8</a></li>
-                </ul>
-            </li>
+    <aside class="left-aside content__holder">
+        <ul class="aside__menu">
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
+            <li><a href="#" class="aside__menu_item">Some link</a></li>
         </ul>
     </aside>
-    <div class="up-bar">
+    <div class="up-bar content__holder">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas molestiae tempore nobis ab obcaecati
         voluptatibus ipsa libero tenetur sapiente magni dolor similique, placeat ducimus ad blanditiis at id fuga
         laborum perspiciatis vel excepturi repellat voluptatum assumenda. Velit quisquam fugit ea, sit itaque vel hic?
@@ -94,34 +53,37 @@
         molestiae, laboriosam accusantium, nemo earum! Eos doloribus velit odio labore molestiae. Dolorum ipsam eveniet
         laudantium aliquid ipsa autem labore iste dicta quas.
     </div>
-    <div class="content">
+    <div class="content content__holder">
         <div class="picture">
-            <img src="https://s1.1zoom.ru/b5050/596/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_1920x1080.jpg" alt="Picture 1">
+            <img class="image" src="https://s1.1zoom.ru/b5050/596/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_1920x1080.jpg"
+                 alt="Picture 1">
         </div>
         <div class="content__panel">
-            <input id="dropdown__input_number" type="number" placeholder="Number"/>
-            <input id="dropdown__input_content" type="text" placeholder="Content"/>
+            <div class="input__holder">
+                <input id="dropdown__input_number" class="dropdown__input" type="number" placeholder="Number"/>
+                <input id="dropdown__input_content" class="dropdown__input" type="text" placeholder="Content"/>
+            </div>
             <div class="dropdown__controller">
-                <select id="dropdown__direction" class="form-select">
+                <select id="dropdown__direction" class="dropdown__input">
                     <option value="vertical">Vertical</option>
                     <option value="horizontal">Horizontal</option>
                 </select>
-                <button id="dropdown__append_button" class="btn btn-outline-success">Append</button>
+                <button id="dropdown__append_button" class="append__button">Append</button>
             </div>
         </div>
         <div class="content__dropdown">
-            <button class="btn btn-secondary dropdown-toggle vertical" type="button" id="dropdown__menu_button"
+            <button class="dropdown__button vertical" type="button" id="dropdown__menu_button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown button
             </button>
-            <div id="dropdown__menu" class="dropdown__menu vertical">
-                <div class="dropdown__element">Some text</div>
-                <div class="dropdown__element">Some text</div>
-                <div class="dropdown__element">Some text</div>
-            </div>
+            <ul id="dropdown__menu" class="dropdown__menu vertical">
+                <li><a href="#" class="dropdown__element">Some text</a></li>
+                <li><a href="#" class="dropdown__element">Some text</a></li>
+                <li><a href="#" class="dropdown__element">Some text</a></li>
+            </ul>
         </div>
     </div>
-    <aside class="right-aside">
+    <aside class="right-aside content__holder">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo dolore enim impedit mollitia? Velit id beatae
         nulla dolores similique odit alias adipisci ab officia reiciendis aut optio consequatur quod cum numquam culpa
         eos deleniti natus repellendus aspernatur, quasi illum placeat iure in. Neque fugiat commodi veritatis! Eveniet
@@ -137,7 +99,7 @@
         laudantium ullam voluptas officiis aliquam odit repellat. Rem recusandae quaerat nam vero, officia voluptas odit
         eveniet magnam nemo reprehenderit nisi ea provident vel error debitis dolores omnis animi?
     </aside>
-    <div class="down-bar">
+    <div class="down-bar content__holder">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum saepe delectus molestias natus architecto animi
         suscipit id a officiis dolorum? Veritatis debitis perspiciatis reprehenderit corrupti unde aliquid reiciendis
         culpa cupiditate cumque laboriosam officia, sed facilis dolorem facere architecto, in ab? Quo dolore incidunt
